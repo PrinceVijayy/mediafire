@@ -1,15 +1,12 @@
-package com.ojas.MediaFire.entity;
-
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.context.properties.bind.DefaultValue;
+package com.ojas.MediaFire.entity_history;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.Date;
 
 @Entity
-@Table(name = "PLANS")
-public class PlanEntity {
+@Table(name = "PLANS_HISTORY")
+public class PlanEntityHistory {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
@@ -30,12 +27,11 @@ public class PlanEntity {
     @Column(name = "PUBLISHED_ON")
     private LocalDateTime publishedOn;
 
-    @Column(name = "VISIBILITY")
-    private Integer visibility=1; //visible=1 ,not_visible=0
-
-    public PlanEntity() {
+    public PlanEntityHistory() {
     }
-    public PlanEntity(Long id, Integer noOfUsers, String name, Double price, Double storageAsMb, String description, Long validityAsDays, LocalDateTime publishedOn, Integer visibility) {
+
+
+    public PlanEntityHistory(Long id, Integer noOfUsers, String name, Double price, Double storageAsMb, String description, Long validityAsDays, LocalDateTime publishedOn) {
         this.id = id;
         this.noOfUsers = noOfUsers;
         this.name = name;
@@ -44,7 +40,7 @@ public class PlanEntity {
         this.description = description;
         this.validityAsDays = validityAsDays;
         this.publishedOn = publishedOn;
-        this.visibility = visibility;
+
     }
 
     public Long getId() {
@@ -110,11 +106,5 @@ public class PlanEntity {
     public void setPublishedOn(LocalDateTime publishedOn) {
         this.publishedOn = publishedOn;
     }
-    public Integer getVisibility() {
-        return visibility;
-    }
 
-    public void setVisibility(Integer visibility) {
-        this.visibility = visibility;
-    }
 }
