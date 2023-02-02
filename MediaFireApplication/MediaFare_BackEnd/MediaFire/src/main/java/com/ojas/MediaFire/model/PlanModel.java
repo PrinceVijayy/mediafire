@@ -1,5 +1,8 @@
 package com.ojas.MediaFire.model;
 
+import javax.persistence.Column;
+import java.time.LocalDateTime;
+
 public class PlanModel {
 
     private Long id;
@@ -10,10 +13,14 @@ public class PlanModel {
     private String description;
     private Long validityAsDays;
 
+    private LocalDateTime publishedOn;
+
+    private Integer visibility; //visible=1 ,not_visible=0
+
     public PlanModel() {
     }
 
-    public PlanModel(Long id, Integer noOfUsers, String name, Double price, Double storageAsMb, String description, Long validityAsDays) {
+    public PlanModel(Long id, Integer noOfUsers, String name, Double price, Double storageAsMb, String description, Long validityAsDays, LocalDateTime publishedOn, Integer visibility) {
         this.id = id;
         this.noOfUsers = noOfUsers;
         this.name = name;
@@ -21,6 +28,8 @@ public class PlanModel {
         this.storageAsMb = storageAsMb;
         this.description = description;
         this.validityAsDays = validityAsDays;
+        this.publishedOn = publishedOn;
+        this.visibility = visibility;
     }
 
     public Long getId() {
@@ -77,5 +86,21 @@ public class PlanModel {
 
     public void setValidityAsDays(Long validityAsDays) {
         this.validityAsDays = validityAsDays;
+    }
+
+    public LocalDateTime getPublishedOn() {
+        return publishedOn;
+    }
+
+    public void setPublishedOn(LocalDateTime publishedOn) {
+        this.publishedOn = publishedOn;
+    }
+
+    public Integer getVisibility() {
+        return visibility;
+    }
+
+    public void setVisibility(Integer visibility) {
+        this.visibility = visibility;
     }
 }
