@@ -1,0 +1,259 @@
+$color_1: #333;
+$color_2: #fff;
+$color_3: grey;
+$color_4: #0070f0;
+$color_5: #248aff;
+$color_6: #282f3d;
+$color_7: #212529;
+$font-family_1: "Helvetica Neue", sans-serif;
+$font-family_2: "Times New Roman", Times, serif;
+$background-color_1: #0045ad;
+$background-color_2: #f3f4f5;
+$background-color_3: #1e242e;
+$background-color_4: #1a1e28;
+$background-color_5: white;
+
+body {
+	font-family: $font-family_1;
+	color: $color_1;
+}
+.home-component {
+	.header {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 80px;
+		background-color: $background-color_1;
+		color: $color_2;
+		display: grid;
+		z-index: 2;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 20px;
+		box-sizing: border-box;
+	}
+	.nav-btn-style {
+		padding: 10px 20px;
+		font-size: 16px;
+		cursor: pointer;
+		margin-left: 10px;
+	}
+	.btn {
+		border-radius: 0% !important;
+	}
+	.upload-here-style {
+		background: #0e2866 url(//static.mediafire.com/images/backgrounds/home_unicorn/hero_tile.png) center 0;
+		background-size: 467px 711px;
+		color: $color_2;
+		padding: 160px 40px 180px;
+		text-align: center;
+		margin-top: 0px;
+	}
+	.button-style {
+		padding: 18px 50px !important;
+		font-size: 20px !important;
+		font-weight: 600 !important;
+		cursor: pointer;
+		margin-left: 10px;
+		margin-top: 120px;
+	}
+	#companies-used {
+		text-align: center;
+		color: $color_3;
+		font-family: $font-family_2;
+		font-size: 30px;
+		margin-top: 20px;
+		border-bottom: 2px #fff;
+	}
+	img {
+		color: $color_3;
+		margin: 30px;
+	}
+	.main-features {
+		background-color: $background-color_2;
+		text-align: center;
+		.heading {
+			color: $color_4;
+		}
+	}
+	.heading {
+		font-size: 44px;
+		font-weight: bold;
+		text-align: center;
+		padding: 80px 40px;
+	}
+	#user-reviews {
+		background-color: $background-color_3 !important;
+		.heading {
+			font-size: 40px;
+			color: $color_5;
+		}
+	}
+	#heart {
+		padding-top: 30px;
+		padding-bottom: -10px;
+		text-align: center;
+	}
+	.info-block {
+		text-align: center;
+		.info {
+			display: inline-block;
+			background: #e8e9f3;
+			color: $color_6;
+			padding: 20px 30px 30px;
+			border-radius: 4px;
+			width: 20%;
+			text-align: center;
+			margin-bottom: 15px;
+			box-sizing: border-box;
+		}
+	}
+	.top-features {
+		padding-bottom: 50px;
+		text-align: center;
+		.features {
+			.heading {
+				font-weight: bolder;
+			}
+			.card {
+				border: none;
+			}
+		}
+	}
+	#footer {
+		background-color: $background-color_4;
+		padding: 50px 100px;
+		h3 {
+			text-align: center;
+			padding-bottom: 50px;
+			color: $color_3;
+		}
+		.card {
+			border: none;
+			background-color: $background-color_4;
+			color: $color_3;
+		}
+		.card-text {
+			&:last-child {
+				margin-bottom: 0;
+				margin: 0%;
+				width: 159px;
+			}
+		}
+		.copyright {
+			padding: 50px 0px 20px 0px;
+			color: $color_3;
+			font-size: medium;
+		}
+		.recaptcha {
+			color: $color_3;
+			font-size: smaller;
+		}
+	}
+	.para {
+		display: inline-block;
+		text-align: center;
+		width: 70%;
+		font-size: 22px;
+		padding-bottom: 80px;
+	}
+}
+#emp-list {
+	.custom-date-picker {
+		height: 40px;
+		width: 200px;
+		background-color: $background-color_5;
+		color: $color_7;
+		border: 1px solid #ced4da;
+		border-radius: 5px;
+		padding: 10px;
+	}
+}
+@media screen and (max-width: 635px) {
+	#home-component {
+		.header {
+			height: 120px;
+		}
+		.btn {
+			margin-top: 10px;
+		}
+	}
+}
+@media screen and (max-width: 400px) {
+	#home-component {
+		.header {
+			height: 220px;
+			position: fixed;
+		}
+		.btn {
+			white-space: nowrap;
+			margin-top: 10px;
+		}
+		.upload-here-style {
+			h1 {
+				padding-top: 103px;
+			}
+		}
+	}
+}
+@media screen and (max-width: 1100px) {
+	#home-component {
+		.info-block {
+			justify-content: center;
+			.info {
+				width: 75%;
+				height: 25%;
+				background: #e8e9f3;
+				color: $color_6;
+				border-radius: 4px;
+				text-align: center;
+			}
+		}
+	}
+}
+@media screen and (max-width: 775px) {
+	#home-component {
+		#footer {
+			background-color: $background-color_4;
+			padding: 50px 100px;
+			.contact {
+				display: none;
+			}
+			h3 {
+				text-align: center;
+				padding-bottom: 100px;
+				color: $color_3;
+			}
+			.card {
+				border: none;
+				background-color: $background-color_4;
+				color: $color_3;
+			}
+			.card-text {
+				&:last-child {
+					margin-bottom: 0;
+					margin: 0%;
+					width: 159px;
+				}
+			}
+			.copyright {
+				padding: 90px 0px 20px 0px;
+				color: $color_3;
+				font-size: medium;
+			}
+			.recaptcha {
+				color: $color_3;
+				font-size: smaller;
+			}
+		}
+	}
+}
+@media screen and (min-width: 774px) {
+	#home-component {
+		.single-card {
+			display: none;
+		}
+	}
+}
