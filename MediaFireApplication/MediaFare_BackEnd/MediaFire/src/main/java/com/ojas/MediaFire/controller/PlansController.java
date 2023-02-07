@@ -10,6 +10,7 @@ import java.util.List;
 
 @RestController
 @Repository
+@CrossOrigin
 @RequestMapping("/plan")
 public class PlansController {
 
@@ -18,6 +19,7 @@ public class PlansController {
     @Autowired
     public PlansController(PlanServiceImpl planService) {
         this.planService = planService;
+
     }
 
     @GetMapping("/user/list")

@@ -14,7 +14,7 @@ const HeaderComponent = () => {
       <header className="header nav-bar-style">
         <nav>
           <ul>
-            <h1>Attendance tracker</h1>
+            <h1>MediaFire</h1>
           </ul>
         </nav>
         <div className="nav-btn-style">
